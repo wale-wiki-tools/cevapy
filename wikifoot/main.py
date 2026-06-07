@@ -10,7 +10,6 @@ from sources import DriblDataSource
 class UnsupportedDatasourceException(Exception):
   pass
 
-
 @click.group()
 def wikifoot():
   pass
@@ -23,12 +22,13 @@ def table(site: str, config: str, dry_run: bool):
   with open(config, 'rb') as f:
     toml = tomllib.load(f)
 
-    if toml["datasource"]["type"] == "dribl":
-      source = DriblDataSource()
-      table = source.get_table(toml)
+    match toml["datasource"]["type"]:
+      case "dribl":
+        source = DriblDataSource()
+        table = source.get_table(toml)
       # TODO: create template from table
-    else:
-      raise UnsupportedDatasourceException()
+      case _:
+        raise UnsupportedDatasourceException()
 
 if __name__ == "__main__":
   wikifoot()

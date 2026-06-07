@@ -1,4 +1,5 @@
 from typing import TypedDict
+from abc import abstractmethod
 import requests
 
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
@@ -14,6 +15,20 @@ class TablePosition(TypedDict):
 class DataSource:
   def __init__(self):
     self.table: list[TablePosition] = []
+  
+  @abstractmethod
+  def get_table(self, config) -> list[TablePosition]:
+    """
+    Returns a dictionary representing the (ordered) current table.
+    """
+    pass
+
+  @abstractmethod
+  def find_replace(self, config, dry_run: bool) -> str:
+    """
+    Finds and replaces information in an existing Wikipedia template.
+    """
+    pass
 
 class DriblDataSource(DataSource):
   def get_table(self, config) -> list[TablePosition]:
@@ -39,3 +54,6 @@ class DriblDataSource(DataSource):
       self.table.append(position)
 
     return self.table
+
+  def find_replace(self, config, dry_run: bool) -> str:
+    pass

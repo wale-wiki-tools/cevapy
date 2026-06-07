@@ -3,7 +3,7 @@ name = "wikifoot"
 version = "0.1.0"
 description = "Wikipedia bot to edit league information"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.10"
 dependencies = [
     "click>=8.4.1",
     "pywikibot>=11.3.0",
