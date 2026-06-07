@@ -1,0 +1,30 @@
+[league]
+name="National Premier Leagues Victoria"
+
+[datasource]
+type="dribl"
+base-url="https://fv.dribl.com"
+
+[datasource.dribl]
+comp-id="1pN6pRypd0"
+league-id="OEN2MExEmq"
+
+[season]
+page-format="{{year}} National Premier Leagues Victoria"
+season-table-index=2
+
+[teams]
+ALT="[[Altona Magic SC|Altona Magic]]"
+AVO="[[Avondale FC]]"
+BEN="[[Bentleigh Greens SC|Bentleigh Greens]]"
+CSG="[[Caroline Springs George Cross FC|Caroline Springs George Cross]]"
+DAN="[[Dandenong City SC|Dandenong City]]"
+DTH="[[Dandenong Thunder SC|Dandenong Thunder]]"
+GGL="[[Green Gully SC|Green Gully]]"
+HEI="[[Heidelberg United FC|Heidelberg United]]"
+HUM="[[Hume City FC|Hume City]]"
+MCY="[[Melbourne City FC Youth|Melbourne City Youth]]"
+OAK="[[Oakleigh Cannons FC|Oakleigh Cannons]]"
+PRE="[[Preston Lions FC|Preston Lions]]"
+SMB="[[South Melbourne FC|South Melbourne]]"
+SAL="[[St Albans Saints SC|St Albans Saints]]"

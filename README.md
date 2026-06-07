@@ -1,0 +1,2 @@
+# wikifoot
+[Documentation coming soon]

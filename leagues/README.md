@@ -1,0 +1,1 @@
+This file is intended to be a living folder for **current season** team information for given leagues.
