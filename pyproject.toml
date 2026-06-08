@@ -9,3 +9,34 @@ dependencies = [
     "pywikibot>=11.3.0",
     "requests>=2.34.2",
 ]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+    "isort>=8.0.1",
+]
+
+[tool.black]
+line-length = 88                 # Default is 88. Can change to 79, 100, etc.
+target-version = ['py310']       # Python versions to support
+include = '\.pyi?$'              # Files to include (regex)
+extend-exclude = '''             # Files or directories to ignore
+/(
+    \.git
+
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+
+  | \.venv
+  | _build
+  | buck-out
+
+  | build
+  | dist
+)/
+'''
+skip-string-normalization = false # Set true to keep your original single/double quotes
+
+[tool.isort]
+profile = "black"

@@ -9,22 +9,82 @@ base-url="https://fv.dribl.com"
 comp-id="1pN6pRypd0"
 league-id="OEN2MExEmq"
 
+[datasource.dribl.name-overrides]
+"Melbourne City - NPL"="Melbourne City Youth"
+"St Albans Saints Dinamo"="St Albans Saints"
+"Avondale"="Avondale FC"
+
 [season]
-page-format="{{year}} National Premier Leagues Victoria"
-season-table-index=2
+page-format="%year National Premier Leagues Victoria"
+section-index=7
 
 [teams]
-ALT="[[Altona Magic SC|Altona Magic]]"
-AVO="[[Avondale FC]]"
-BEN="[[Bentleigh Greens SC|Bentleigh Greens]]"
-CSG="[[Caroline Springs George Cross FC|Caroline Springs George Cross]]"
-DAN="[[Dandenong City SC|Dandenong City]]"
-DTH="[[Dandenong Thunder SC|Dandenong Thunder]]"
-GGL="[[Green Gully SC|Green Gully]]"
-HEI="[[Heidelberg United FC|Heidelberg United]]"
-HUM="[[Hume City FC|Hume City]]"
-MCY="[[Melbourne City FC Youth|Melbourne City Youth]]"
-OAK="[[Oakleigh Cannons FC|Oakleigh Cannons]]"
-PRE="[[Preston Lions FC|Preston Lions]]"
-SMB="[[South Melbourne FC|South Melbourne]]"
-SAL="[[St Albans Saints SC|St Albans Saints]]"
+[[teams.altona-magic]]
+abbrev = "ALT"
+name = "Altona Magic"
+wikitext = "[[Altona Magic SC|Altona Magic]]"
+
+[[teams.avondale-fc]]
+abbrev = "AVO"
+name = "Avondale FC"
+wikitext = "[[Avondale FC]]"
+
+[[teams.bentleigh-greens]]
+abbrev = "BEN"
+name = "Bentleigh Greens"
+wikitext = "[[Bentleigh Greens SC|Bentleigh Greens]]"
+
+[[teams.caroline-springs-george-cross]]
+abbrev = "CSG"
+name = "Caroline Springs George Cross"
+wikitext="[[Caroline Springs George Cross FC|Caroline Springs George Cross]]"
+
+[[teams.dandenong-city]]
+abbrev = "DAN"
+name = "Dandenong City"
+wikitext = "[[Dandenong City SC|Dandenong City]]"
+
+[[teams.dandenong-thunder]]
+abbrev = "DTH"
+name = "Dandenong Thunder"
+wikitext = "[[Dandenong Thunder SC|Dandenong Thunder]]"
+
+[[teams.green-gully]]
+abbrev="GGL"
+name = "Green Gully"
+wikitext = "[[Green Gully SC|Green Gully]]"
+
+[[teams.heidelberg-united]]
+abbrev="HEI"
+name="Heidelberg United"
+wikitext="[[Heidelberg United FC|Heidelberg United]]"
+
+[[teams.hume-city]]
+abbrev="HUM"
+name="Hume City"
+wikitext="[[Hume City FC|Hume City]]"
+
+[[teams.melbourne-city-youth]]
+abbrev="MCY"
+name="Melbourne City Youth"
+wikitext="[[Melbourne City FC Youth|Melbourne City Youth]]"
+
+[[teams.oakleigh-cannons]]
+abbrev="OAK"
+name="Oakleigh Cannons"
+wikitext="[[Oakleigh Cannons FC|Oakleigh Cannons]]"
+
+[[teams.preston-lions]]
+abbrev="PRE"
+name="Oakleigh Cannons"
+wikitext="[[Preston Lions FC|Preston Lions]]"
+
+[[teams.south-melbourne]]
+abbrev="SMB"
+name="South Melbourne"
+wikitext="[[South Melbourne FC|South Melbourne]]"
+
+[[teams.st-albans-saints]]
+abbrev="SAL"
+name="St Albans Saints"
+wikitext="[[St Albans Saints SC|St Albans Saints]]"
