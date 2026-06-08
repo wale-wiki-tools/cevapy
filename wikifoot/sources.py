@@ -84,6 +84,8 @@ class DriblDataSource(DataSource):
         # Generate 'update' time
         code = re.sub(r"(\|update)=([a-zA-Z0-9\s\(\)]+)", rf"\g<1>={datetime.now().strftime("%d %B %Y")}\n", code)
 
+        team_order = []
+
         for team in self.table:
           # Crude name normalisation logic
           name = re.sub(r'(FC|SC|AFC|CF)', '', team["name"]).strip()
@@ -95,12 +97,15 @@ class DriblDataSource(DataSource):
           config_team = config["teams"][normalized_name][0]
 
           abbrev = config_team["abbrev"]
+          team_order.append(abbrev)
 
           code = re.sub(rf"(\|win_{abbrev})=(\d)+", rf"\g<1>={team["wins"]}", code)
           code = re.sub(rf"(\|draw_{abbrev})=(\d)+", rf"\g<1>={team["draws"]}", code)
           code = re.sub(rf"(\|loss_{abbrev})=(\d)+", rf"\g<1>={team["losses"]}", code)
           code = re.sub(rf"(\|gf_{abbrev})=(\d)+", rf"\g<1>={team["goals_for"]}", code)
           code = re.sub(rf"(\|ga_{abbrev})=(\d)+", rf"\g<1>={team["goals_against"]}", code)
+
+        code = re.sub(r"(\|team_order)=((\s)?[a-zA-Z0-9\s,]+)", rf"\g<1>={", ".join(team_order)}\n", code)
         
         print(code)
     else:

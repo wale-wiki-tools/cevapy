@@ -11,3 +11,4 @@ wheels/
 
 # Wikipedia API cache?
 apicache/
+throttle.ctrl
