@@ -11,6 +11,11 @@ I built this script as a way to help automate the grind of updating match tables
   - [ ] "Dry run" (test) support
 - [ ] Repository & TOML schema for league configurations
 
+## Supported Datasources
+| Datasources | Code Support |
+| --- | --- |
+| [Dribl](https://dribl.com)  |  Tables
+
 ## How to use
 [coming soon]
 
